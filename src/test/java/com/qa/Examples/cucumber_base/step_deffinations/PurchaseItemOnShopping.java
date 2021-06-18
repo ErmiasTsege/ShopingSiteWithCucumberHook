@@ -36,13 +36,15 @@ public class PurchaseItemOnShopping {
 
 	@When("the user try to sing in with email {word} and password {word}")
 	public void when_the_user_try_to_login(String useremail, String password) throws InterruptedException {
+		Thread.sleep(10000);
 		pom.loginpage.fillInLoginDetails(useremail, password);
 		//throw new io.cucumber.java.PendingException();
-		
+		Thread.sleep(10000);
 	}
 	
 	@Then("the user is signined in")
 	public void then_the_user_is_loged_in() throws InterruptedException {
+	
 		accountActual=pom.loginpage.signinCompeleted();
      System.out.println(pom.loginpage.getSigninAccountName().getText());
 		assertEquals(accountExpected, accountActual);

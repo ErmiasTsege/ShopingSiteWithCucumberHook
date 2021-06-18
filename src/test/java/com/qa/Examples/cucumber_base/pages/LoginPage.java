@@ -20,7 +20,7 @@ public class LoginPage {
 		useremailInputField.sendKeys(useremail);
 		passwordInputField.sendKeys(password);
 
-		loginButton.submit();
+		loginButton.click();
 	}
 	
 	
